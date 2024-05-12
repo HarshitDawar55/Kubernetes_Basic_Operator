@@ -1,0 +1,27 @@
+# permissions for end users to view customservices.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: clusterrole
+    app.kubernetes.io/instance: customservice-viewer-role
+    app.kubernetes.io/component: rbac
+    app.kubernetes.io/created-by: operators
+    app.kubernetes.io/part-of: operators
+    app.kubernetes.io/managed-by: kustomize
+  name: customservice-viewer-role
+rules:
+- apiGroups:
+  - customapp.harshitdawar.com.harshitdawar.com
+  resources:
+  - customservices
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - customapp.harshitdawar.com.harshitdawar.com
+  resources:
+  - customservices/status
+  verbs:
+  - get

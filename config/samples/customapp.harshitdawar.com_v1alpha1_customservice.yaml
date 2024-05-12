@@ -1,0 +1,12 @@
+apiVersion: customapp.harshitdawar.com.harshitdawar.com/v1alpha1
+kind: Customservice
+metadata:
+  labels:
+    app.kubernetes.io/name: customservice
+    app.kubernetes.io/instance: customservice-sample
+    app.kubernetes.io/part-of: operators
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: operators
+  name: customservice-sample
+spec:
+  # TODO(user): Add fields here
